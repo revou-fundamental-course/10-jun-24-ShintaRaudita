@@ -3,9 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shinta</title>
+    <title>Website Konversi Suhu</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
 </head>
 <body>
-    <h1>header 1</h1>
+    <main>
+        <section class="container">
+            <div class="converter">
+                <h1>Konversi Suhu </h1>
+                <div class="input-container">
+                    <label for="temperature">Nilai Temperatur: </label>
+                    <input type="number" id="temperature" value="50">
+                </div>
+                <div class="units">
+                    <div class="unit">
+                        <label for="from-unit">Dari:</label>
+                        <select id="from-unit">
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                    </div>
+                    <div class="unit">
+                        <label for="to-unit">Ke:</label>
+                        <select id="to-unit">
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button id="convert">Hitung</button>
+                    <button id="reset">Reset</button>
+                </div>
+                <div class="result">
+                    <p>Hasil:</p>
+                    <span id="converted-temp"></span>
+                </div>
+                <div class="calculation">
+                    <p>Cara Kalkulasi:</p>
+                    <textarea id="calculation-details" readonly></textarea>
+                    <p class="signature">
+                        <p>&copy; <span id="year"></span> Konversi Suhu by <a href="https://github.com/ShintaRaudita/">Shinta Raudita</a> 🌱</p>
+                    </p>
+                </div>
+            </div>
+
+            <div class="converter">
+                <header>
+                    <h1>Cara Konversi Dari Celcius (&deg;C) ke Fahrenheit (&deg;F) dan Kelvin (K)</h1>
+                </header>
+                <hr>
+                <p>
+                    Suhu <span class="sBesar">S</span> dalam derajat Fahrenheit (&deg;F) sama dengan suhu <span class="sBesar">S</span> dalam derajat Celcius (&deg;C) kali 9/5 tambah 32.
+                </p>
+                <p>
+                    <span class="sBesar">S</span> <sub>(&deg;F)</sub> = (<span class="sBesar">S</span> <sub>(&deg;C)</sub> x 1.8 ) + 32
+                </p>
+                <p>atau</p>
+                <p>
+                    <span class="sBesar">S</span> <sub>(&deg;C)</sub> = (<span class="sBesar">S</span> <sub>(&deg;F)</sub> - 32) / 1.8
+                </p>
+                <p>
+                    Suhu <span class="sBesar">S</span> dalam Kelvin (K) sama dengan suhu <span class="sBesar">S</span> dalam derajat Celcius (&deg;C) tambah 273.15.
+                </p>
+                <p>
+                    <span class="sBesar">S</span> <sub>(K)</sub> = <span class="sBesar">S</span> <sub>(&deg;C)</sub> + 273.15
+                </p>
+                <p>atau</p>
+                <p>
+                    <span class="sBesar">S</span> <sub>(&deg;C)</sub> = <span class="sBesar">S</span> <sub>(K)</sub> - 273.15
+                </p>
+                <p>
+                    Suhu <span class="sBesar">S</span> dalam Kelvin (K) sama dengan suhu <span class="sBesar">S</span> dalam derajat Fahrenheit (&deg;F) tambah 459.67 kali 5/9.
+                </p>
+                <p>
+                    <span class="sBesar">S</span> <sub>(K)</sub> = (<span class="sBesar">S</span> <sub>(&deg;F)</sub> + 459.67) x 5/9
+                </p>
+                <p>atau</p>
+                <p>
+                    <span class="sBesar">S</span> <sub>(&deg;F)</sub> = <span class="sBesar">S</span> <sub>(K)</sub> x 9/5 - 459.67
+                </p>
+            </div>
+        </section>
+    </main>
+    <!-- <footer>
+        <p>Copyright &copy; 2024 by Shinta Raudita</p>
+    </footer> -->
+    <script src="./js/script.js"></script>
 </body>
 </html>
